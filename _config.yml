@@ -13,9 +13,9 @@ title                    : "John Smith"
 title_separator          : "-"
 name                     : &name "John Smith"
 description              : &description "A LLM Researcher"
-url                      : https://mcptest-user.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "mcptest-user/My-Homepage"
+url                      : https://grandcockatoohex.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+baseurl                  : "/My-Homepage" # the subpath of your site, e.g. "/blog"
+repository               : "grandcockatoohex/My-Homepage"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -46,7 +46,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "mcptest-user" # Username - Update with your username on the site
+  github           : "grandcockatoohex" # Username - Update with your username on the site
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -130,7 +130,6 @@ bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-
 # Social Sharing
 twitter:
   username               : &twitter
@@ -146,7 +145,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-
 
 # Analytics
 analytics:
@@ -228,7 +226,6 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
 
 # These settings control how pages and collections are included in the site
 defaults:
@@ -326,31 +323,42 @@ whitelist:
 #  Path (examples)
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: "tags"
+#  - <base_path>/categories/category/index.html ~> path: "categories"
+#  - <base_path>/collection/collection/index.html ~> path: "collection"
+#
+#  type: liquid
+#  path: /tags/
+#
+#  type: liquid
+#  path: /categories/
+#
+#  type: liquid
+#  path: /collection/
+#
+#  type: jekyll-archives
+#  enabled:
+#    - categories
+#    - tags
+#  layouts:
+#    category: archive-taxonomy
+#    tag: archive-taxonomy
+#  permalinks:
+#    category: /categories/:name/
+#    tag: /tags/:name/
 
 # HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+# - https://jch.pw/blog/2014/03/14/compress-your-html-output-with-jekyll/
+#compress_html:
+#  clippings: all
+#  comments: ["<!-- ", " -->"]
+#  endings: all
+#  ignore:
+#    envs: [development]
+
+# Defaults for sitemap
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true
